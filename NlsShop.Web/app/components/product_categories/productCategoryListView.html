@@ -5,7 +5,7 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Sản phẩm</a></li>
-        <li><a ui-sref="productCategories">Danh mục sản phẩm</a></li>
+        <li><a ui-sref="productCategories" class="active">Danh mục sản phẩm</a></li>
     </ol>
 </section>
 <!-- Main content -->
@@ -20,12 +20,17 @@
             </div>
         </div>
         <div class="box-body">
-            <div class="col-md-6">
-                <div class="input-group">
-                    <input type="text" class="form-control" ng-model="keyword" placeholder="Từ khoá..." />
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button" ng-click="search()">Tìm kiếm</button>
-                    </span>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" ng-model="keyword" placeholder="Từ khoá..." />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="search()">Tìm kiếm</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <button class="btn btn-success" type="button" ui-sref="add_product_category">Thêm mới</button>
                 </div>
             </div>
             <div class="col-md-12">

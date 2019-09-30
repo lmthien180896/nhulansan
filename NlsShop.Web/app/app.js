@@ -3,7 +3,7 @@
 (function () {
     angular.module('nlsshop',
            ['nlsshop.products',
-            'nlsshop.productCategories',
+            'nlsshop.product_category',
             'nlsshop.common']).config(config);
 
     config.$inject = ['$stateProvider', '$urlRouterProvider'];

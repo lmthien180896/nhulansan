@@ -4,4 +4,4 @@
     function productCategoryEditController() {
 
     }
-})(angular.module('nlsshop.productCategories'));
+})(angular.module('nlsshop.product_category'));

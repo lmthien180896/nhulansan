@@ -1,19 +1,19 @@
 ﻿(function () {
-    angular.module('nlsshop.productCategories', ['nlsshop.common']).config(config);
+    angular.module('nlsshop.product_category', ['nlsshop.common']).config(config);
 
     config.$inject = ['$stateProvider', '$urlRouterProvider'];
 
     function config($stateProvider, $urlRouterProvider) {
-        $stateProvider.state('productCategories', {
-            url: "/productCategories",
+        $stateProvider.state('product_categories', {
+            url: "/product_categories",
             templateUrl: "/app/components/product_categories/productCategoryListView.html",
             controller: "productCategoryListController"
-        }).state('productCategory_add', {
-            url: "/productCategory_add",
+        }).state('add_product_category', {
+            url: "/add_product_category",
             templateUrl: "/app/components/product_categories/productCategoryAddView.html",
             controller: "productCategoryAddController"
-        }).state('productCategory_edit', {
-            url: "/productCategory_edit",
+        }).state('edit_product_category', {
+            url: "/edit_product_category",
             templateUrl: "/app/components/product_categories/productCategoryEditView.html",
             controller: "productCategoryEditController"
         });

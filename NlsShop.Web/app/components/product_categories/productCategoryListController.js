@@ -10,8 +10,8 @@
         $scope.getProductCategories = getProductCategories;
         $scope.keyword = '';
 
-        $scope.search = search;
-
+        $scope.search = search;        
+        
         function search() {
             getProductCategories();
         }
@@ -43,4 +43,4 @@
 
         $scope.getProductCategories();
     }
-})(angular.module('nlsshop.productCategories'));
+})(angular.module('nlsshop.product_category'));
