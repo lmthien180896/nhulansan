@@ -4,4 +4,4 @@
     function productEditController() {
 
     }
-})(angular.module('nlsshop.products'));
+})(angular.module('nlsshop.product'));

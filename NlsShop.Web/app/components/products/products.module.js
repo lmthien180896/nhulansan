@@ -1,5 +1,5 @@
 ﻿(function () {
-    angular.module('nlsshop.products', ['nlsshop.common']).config(config);
+    angular.module('nlsshop.product', ['nlsshop.common']).config(config);
 
     config.$inject = ['$stateProvider', '$urlRouterProvider'];
 
@@ -8,12 +8,12 @@
             url: "/products",
             templateUrl: "/app/components/products/productListView.html",
             controller: "productListController"
-        }).state('product_add', {
-            url: "/product_add",
+        }).state('add_product', {
+            url: "/add_product",
             templateUrl: "/app/components/products/productAddView.html",
             controller: "productAddController"
-        }).state('product_edit', {
-            url: "/product_edit",
+        }).state('edit_product', {
+            url: "/edit_product/:id",
             templateUrl: "/app/components/products/productEditView.html",
             controller: "productEditController"
         });

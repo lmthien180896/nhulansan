@@ -2,7 +2,7 @@
 
 (function () {
     angular.module('nlsshop',
-           ['nlsshop.products',
+           ['nlsshop.product',
             'nlsshop.product_category',
             'nlsshop.common']).config(config);
 

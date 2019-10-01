@@ -31,7 +31,7 @@
                 $scope.parentCategories = result.data;
             }, function () {
                 console.log("Can't load parent categories");
-            })
+            });
         }
 
         loadParentCategories();

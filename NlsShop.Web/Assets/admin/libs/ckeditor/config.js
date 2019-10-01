@@ -1,43 +1,28 @@
-/**
- * @license Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+﻿/**
+ * @license Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or http://ckeditor.com/license
  */
 
-CKEDITOR.editorConfig = function (config) {
-    // Define changes to default configuration here.
-    // For complete reference see:
-    // http://docs.ckeditor.com/#!/api/CKEDITOR.config
+CKEDITOR.editorConfig = function( config ) {
+	// Define changes to default configuration here. For example:
+	// config.language = 'fr';
+    // config.uiColor = '#AADC6E';
 
-    // The toolbar groups arrangement, optimized for two toolbar rows.
-    config.toolbarGroups = [
-		{ name: 'clipboard', groups: ['clipboard', 'undo'] },
-		{ name: 'editing', groups: ['find', 'selection', 'spellchecker'] },
-		{ name: 'links' },
-		{ name: 'insert' },
-		{ name: 'forms' },
-		{ name: 'tools' },
-		{ name: 'document', groups: ['mode', 'document', 'doctools'] },
-		{ name: 'others' },
-		'/',
-		{ name: 'basicstyles', groups: ['basicstyles', 'cleanup'] },
-		{ name: 'paragraph', groups: ['list', 'indent', 'blocks', 'align', 'bidi'] },
-		{ name: 'styles' },
-		{ name: 'colors' },
-		{ name: 'about' }
-    ];
+    config.height = 500;     // 500 pixels wide.
+    config.syntaxhighlight_lang = 'csharp';
+    config.syntaxhighlight_hideControls = true;
+    config.languages = 'vi';
+    config.filebrowserBrowseUrl = '/assets/admin/js/plugins/ckfinder/ckfinder.html';
+    config.filebrowserImageBrowseUrl = '/assets/admin/js/plugins/ckfinder/ckfinder.html?Types=Images';
+    config.filebrowserFlashBrowseUrl = '/assets/admin/js/plugins/ckfinder/ckfinder.html?Types=Flash';
+    config.filebrowserUploadUrl = '/assets/admin/js/plugins/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=File';
+    config.filebrowserImageUploadUrl = '/Data';
+    config.filebrowserFlashUploadUrl = '/assets/admin/js/plugins/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Flash';
 
-    // Remove some buttons provided by the standard plugins, which are
-    // not needed in the Standard(s) toolbar.
-    config.removeButtons = 'Underline,Subscript,Superscript';
+    //Chỉnh hình ảnh center align
+    config.extraPlugins = 'image';
 
-    // Set the most common block elements.
-    config.format_tags = 'p;h1;h2;h3;pre';
+    CKFinder.setupCKEditor(null, '/assets/admin/js/plugins/ckfinder/');
 
-    // Simplify the dialog windows.
-    config.removeDialogTabs = 'image:advanced;link:advanced';
 
-    config.filebrowserBrowseUrl = '/Assets/admin/libs/ckfinder/ckfinder.html',
-    config.filebrowserUploadUrl = '/Assets/admin/libs/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Files',
-    config.filebrowserWindowWidth = '1000',
-    config.filebrowserWindowHeight = '700'
 };

@@ -1,3 +1,3 @@
 ﻿(function () {
-    angular.module('nlsshop.common', ['ui.router','ngBootbox'])
+    angular.module('nlsshop.common', ['ui.router','ngBootbox','ngCkeditor'])
 })();
