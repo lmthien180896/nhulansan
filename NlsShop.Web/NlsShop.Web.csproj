@@ -4337,7 +4337,8 @@
     <Folder Include="Assets\client\css\" />
     <Folder Include="Assets\client\images\" />
     <Folder Include="Assets\client\js\" />
-    <Folder Include="UploadedFiles\" />
+    <Folder Include="UploadedFiles\files\" />
+    <Folder Include="UploadedFiles\_thumbs\Files\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

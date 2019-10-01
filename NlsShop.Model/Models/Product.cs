@@ -1,7 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using NlsShop.Model.Abstract;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Xml.Linq;
-using NlsShop.Model.Abstract;
 
 namespace NlsShop.Model.Models
 {
@@ -32,11 +31,22 @@ namespace NlsShop.Model.Models
         public decimal Price { set; get; }
 
         public decimal? PromotionPrice { set; get; }
+
         public int? Warranty { set; get; }
 
         [MaxLength(500)]
         public string Description { set; get; }
+
         public string Content { set; get; }
+
+        [Required]
+        [MaxLength(50)]
+        public string Model { get; set; }
+
+        public int Quantity { get; set; }
+
+        [MaxLength(256)]
+        public string Material { get; set; }
 
         public bool? HomeFlag { set; get; }
         public bool? HotFlag { set; get; }

@@ -67,6 +67,10 @@
     <Compile Include="Migrations\201909291329315_InitialDB.designer.cs">
       <DependentUpon>201909291329315_InitialDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910010519055_addFieldsProduct.cs" />
+    <Compile Include="Migrations\201910010519055_addFieldsProduct.designer.cs">
+      <DependentUpon>201910010519055_addFieldsProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NlsShopDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,6 +110,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201909291329315_InitialDB.resx">
       <DependentUpon>201909291329315_InitialDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910010519055_addFieldsProduct.resx">
+      <DependentUpon>201910010519055_addFieldsProduct.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

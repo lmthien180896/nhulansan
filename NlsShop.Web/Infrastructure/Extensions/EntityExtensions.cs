@@ -76,6 +76,9 @@ namespace NlsShop.Web.Infrastructure.Extensions
             product.Name = productVm.Name;
             product.Description = productVm.Description;
             product.Alias = productVm.Alias;
+            product.Model = productVm.Model;
+            product.Quantity = productVm.Quantity;
+            product.Material = productVm.Material;
             product.CategoryID = productVm.CategoryID;
             product.Content = productVm.Content;
             product.Image = productVm.Image;

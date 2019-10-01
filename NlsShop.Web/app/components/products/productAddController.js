@@ -16,21 +16,14 @@
         };  
         $scope.AddProduct = AddProduct;
         $scope.GetSeoTitle = GetSeoTitle;
-        $scope.ChooseImage = ChooseImage;
-
-        function ChooseImage() {
-            var finder = new CKFinder();
-            finder.selectActionFunction = function (fileUrl) {
-                $scope.product.Image = fileUrl;
-            };
-            finder.popup();
-        }
+        $scope.ChooseImage = ChooseImage;        
 
         function GetSeoTitle() {
             $scope.product.Alias = commonService.getSeoTitle($scope.product.Name);
         }
 
         function AddProduct() {
+            $scope.product.MoreImages = JSON.stringify($scope.moreImages);
             apiService.post('api/product/create', $scope.product, function (result) {
                 notificationService.displaySuccess(result.data.Name + ' đã được thêm mới');
                 $state.go('products');
@@ -46,6 +39,29 @@
                 console.log("Can't load parent categories");
             });
         }
+
+        $scope.ChooseImage = function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $scope.$apply(function () {
+                    $scope.product.Image = fileUrl;
+                });
+            };
+            finder.popup();
+        };
+
+        $scope.moreImages = [];
+
+        $scope.ChooseMoreImages = function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $scope.$apply(function () {
+                    $scope.moreImages.push(fileUrl);
+                });
+
+            };
+            finder.popup();
+        };
 
         loadParentCategories();
     }

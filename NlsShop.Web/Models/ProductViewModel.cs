@@ -13,6 +13,12 @@ namespace NlsShop.Web.Models
 
         public string Alias { set; get; }
 
+        public string Model { get; set; }
+
+        public int Quantity { get; set; }
+
+        public string Material { get; set; }
+
         public int CategoryID { set; get; }
 
         public string Image { set; get; }
