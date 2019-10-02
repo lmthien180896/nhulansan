@@ -30,7 +30,7 @@ namespace NlsShop.Web.Api
 
         [Route("getall")]
         [HttpGet]
-        public HttpResponseMessage GetAll(HttpRequestMessage request, string keyword, int page, int pageSize = 20)
+        public HttpResponseMessage GetAll(HttpRequestMessage request, string keyword, int page, int pageSize = 10)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -71,11 +71,11 @@ namespace NlsShop.Web.Api
 
         [Route("getallparents")]
         [HttpGet]
-        public HttpResponseMessage GetAll(HttpRequestMessage request)
+        public HttpResponseMessage GetAllParents(HttpRequestMessage request)
         {
             return CreateHttpResponse(request, () =>
             {
-                var model = _productCategoryService.GetAll();
+                var model = _productCategoryService.GetAllParents();
 
                 var responseData = Mapper.Map<IEnumerable<ProductCategory>, IEnumerable<ProductCategoryViewModel>>(model);
 

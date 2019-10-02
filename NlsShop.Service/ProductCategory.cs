@@ -14,6 +14,8 @@ namespace NlsShop.Service
 
         ProductCategory Delete(int id);
 
+        IEnumerable<ProductCategory> GetAllParents();
+
         IEnumerable<ProductCategory> GetAll();
 
         IEnumerable<ProductCategory> GetAll(string keyword);
@@ -44,6 +46,11 @@ namespace NlsShop.Service
         public ProductCategory Delete(int id)
         {
             return _productCategoryRepository.Delete(id);
+        }
+
+        public IEnumerable<ProductCategory> GetAllParents()
+        {
+            return _productCategoryRepository.GetMulti(x => x.ParentID == null);
         }
 
         public IEnumerable<ProductCategory> GetAll()
