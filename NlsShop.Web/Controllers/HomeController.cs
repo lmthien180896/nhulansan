@@ -13,18 +13,17 @@ namespace NlsShop.Web.Controllers
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
 
-            return View();
+        [ChildActionOnly]
+        public ActionResult Footer()
+        {
+            return PartialView();
         }
 
-        public ActionResult Contact()
+        [ChildActionOnly]
+        public ActionResult MainMenu()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return PartialView();
         }
     }
 }
