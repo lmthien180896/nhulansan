@@ -71,6 +71,10 @@
     <Compile Include="Migrations\201910010519055_addFieldsProduct.designer.cs">
       <DependentUpon>201910010519055_addFieldsProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910020122443_addApplicationUser.cs" />
+    <Compile Include="Migrations\201910020122443_addApplicationUser.designer.cs">
+      <DependentUpon>201910020122443_addApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NlsShopDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910010519055_addFieldsProduct.resx">
       <DependentUpon>201910010519055_addFieldsProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910020122443_addApplicationUser.resx">
+      <DependentUpon>201910020122443_addApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -9,6 +9,7 @@ using NlsShop.Web.Infrastructure.Core;
 namespace NlsShop.Web.Api
 {
     [RoutePrefix("api/postcategory")]
+    [Authorize]
     public class PostCategoryController : ApiControllerBase
     {
         IPostCategoryService _postCategoryService;

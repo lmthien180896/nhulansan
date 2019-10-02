@@ -9,7 +9,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace NlsShop.Data
 {
-    public class NlsShopDbContext : DbContext
+    public class NlsShopDbContext : IdentityDbContext<ApplicationUser>
     {
         public NlsShopDbContext() : base("NlsShopConnection")
         {

@@ -15,6 +15,7 @@ using System.Web.Script.Serialization;
 namespace NlsShop.Web.Api
 {
     [RoutePrefix("api/product")]
+    [Authorize]
     public class ProductController : ApiControllerBase
     {
         IProductService _productService;
@@ -100,7 +101,7 @@ namespace NlsShop.Web.Api
                     var newProduct = new Product();
                     newProduct.UpdateProduct(productVm);
                     newProduct.CreatedDate = DateTime.Now;
-                    //newProduct.CreatedBy = 
+                    newProduct.CreatedBy = User.Identity.Name;
                     _productService.Add(newProduct);
                     _productService.Save();
                     var responseData = Mapper.Map<Product, ProductViewModel>(newProduct);
@@ -127,7 +128,7 @@ namespace NlsShop.Web.Api
                     var dbProduct = _productService.GetById(productVm.ID);
                     dbProduct.UpdateProduct(productVm);
                     dbProduct.UpdatedDate = DateTime.Now;
-                    //dbProduct.UpdatedBy = 
+                    dbProduct.UpdatedBy = User.Identity.Name;
                     _productService.Update(dbProduct);
                     _productService.Save();
                     var responseData = Mapper.Map<Product, ProductViewModel>(dbProduct);
