@@ -235,6 +235,13 @@
     <Content Include="app\components\home\rootController.js" />
     <Content Include="app\components\login\loginController.js" />
     <Content Include="app\components\login\loginView.html" />
+    <Content Include="app\components\posts\postAddController.js" />
+    <Content Include="app\components\posts\postAddView.html" />
+    <Content Include="app\components\posts\postEditController.js" />
+    <Content Include="app\components\posts\postEditView.html" />
+    <Content Include="app\components\posts\postListController.js" />
+    <Content Include="app\components\posts\postListView.html" />
+    <Content Include="app\components\posts\posts.module.js" />
     <Content Include="app\components\products\productAddController.js" />
     <Content Include="app\components\products\productAddView.html" />
     <Content Include="app\components\products\productEditController.js" />

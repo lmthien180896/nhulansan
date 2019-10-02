@@ -17,6 +17,8 @@ namespace NlsShop.Service
 
         IEnumerable<Post> GetAll();
 
+        IEnumerable<Post> GetAll(string keyword);
+
         IEnumerable<Post> GetAllPaging(int page, int pageSize, out int totalRow);
 
         IEnumerable<Post> GetAllByCategoryPaging(int categoryId, int page, int pageSize, out int totalRow);
@@ -25,7 +27,7 @@ namespace NlsShop.Service
 
         IEnumerable<Post> GetAllByTagPaging(string tag, int page, int pageSize, out int totalRow);
 
-        void SaveChanges();
+        void Save();
     }
 
     public class PostService : IPostService
@@ -54,6 +56,18 @@ namespace NlsShop.Service
             return _postRepository.GetAll(new string[] { "PostCategory" });
         }
 
+        public IEnumerable<Post> GetAll(string keyword)
+        {
+            if (!string.IsNullOrEmpty(keyword))
+            {
+                return _postRepository.GetMulti(x => x.Name.Contains(keyword) || x.Description.Contains(keyword) || x.Content.Contains(keyword));
+            }
+            else
+            {
+                return _postRepository.GetAll();
+            }
+        }
+
         public IEnumerable<Post> GetAllByCategoryPaging(int categoryId, int page, int pageSize, out int totalRow)
         {
             return _postRepository.GetMultiPaging(x => x.Status && x.CategoryID == categoryId, out totalRow, page, pageSize, new string[] { "PostCategory" });
@@ -76,7 +90,7 @@ namespace NlsShop.Service
             return _postRepository.GetSingleById(id);
         }
 
-        public void SaveChanges()
+        public void Save()
         {
             _unitOfWork.Commit();
         }

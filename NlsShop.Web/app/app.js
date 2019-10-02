@@ -4,6 +4,7 @@
     angular.module('nlsshop',
         ['nlsshop.product',
             'nlsshop.product_category',
+            'nlsshop.post',
             'nlsshop.common'])
         .config(config)
         .config(configAuthentication);
