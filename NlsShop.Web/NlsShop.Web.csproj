@@ -212,6 +212,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductCategoryController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -3723,6 +3724,11 @@
     <Content Include="Assets\admin\libs\ckfinder\skins\v1\uipanel.css" />
     <Content Include="Assets\admin\libs\ckfinder\translations.txt" />
     <Content Include="Assets\admin\libs\fastclick\lib\fastclick.js" />
+    <Content Include="Assets\admin\libs\font-awesome\.gitignore" />
+    <Content Include="Assets\admin\libs\font-awesome\css\font-awesome.css" />
+    <Content Include="Assets\admin\libs\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Assets\admin\libs\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\admin\libs\font-awesome\HELP-US-OUT.txt" />
     <Content Include="Assets\admin\libs\jquery\AUTHORS.txt" />
     <Content Include="Assets\admin\libs\jquery\dist\jquery.js" />
     <Content Include="Assets\admin\libs\jquery\dist\jquery.min.js" />
@@ -4197,6 +4203,7 @@
     <Content Include="Assets\client\images\icons\select-option.png" />
     <Content Include="Assets\client\images\logo\4.png" />
     <Content Include="Assets\client\images\logo\NLS-logo.png" />
+    <Content Include="Assets\client\images\NLS-2211-500x500.jpg" />
     <Content Include="Assets\client\images\others\shape\1.png" />
     <Content Include="Assets\client\images\others\shape\2.png" />
     <Content Include="Assets\client\images\others\shape\3.png" />
@@ -4515,6 +4522,7 @@
     <Content Include="AppSettings.config" />
     <Content Include="ConnectionStrings.config" />
     <Content Include="Libs\CKFinder.dll" />
+    <Content Include="Resources\nlsDb.sql" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -4636,6 +4644,48 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\MainMenu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\admin\libs\font-awesome\.bower.json" />
+    <Content Include="Assets\admin\libs\font-awesome\.npmignore" />
+    <Content Include="Assets\admin\libs\font-awesome\bower.json" />
+    <Content Include="Assets\admin\libs\font-awesome\css\font-awesome.css.map" />
+    <Content Include="Assets\admin\libs\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\admin\libs\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\admin\libs\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\admin\libs\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\admin\libs\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Assets\admin\libs\font-awesome\less\animated.less" />
+    <Content Include="Assets\admin\libs\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Assets\admin\libs\font-awesome\less\core.less" />
+    <Content Include="Assets\admin\libs\font-awesome\less\fixed-width.less" />
+    <Content Include="Assets\admin\libs\font-awesome\less\font-awesome.less" />
+    <Content Include="Assets\admin\libs\font-awesome\less\icons.less" />
+    <Content Include="Assets\admin\libs\font-awesome\less\larger.less" />
+    <Content Include="Assets\admin\libs\font-awesome\less\list.less" />
+    <Content Include="Assets\admin\libs\font-awesome\less\mixins.less" />
+    <Content Include="Assets\admin\libs\font-awesome\less\path.less" />
+    <Content Include="Assets\admin\libs\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Assets\admin\libs\font-awesome\less\screen-reader.less" />
+    <Content Include="Assets\admin\libs\font-awesome\less\stacked.less" />
+    <Content Include="Assets\admin\libs\font-awesome\less\variables.less" />
+    <Content Include="Assets\admin\libs\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Assets\admin\libs\font-awesome\scss\_animated.scss" />
+    <Content Include="Assets\admin\libs\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Assets\admin\libs\font-awesome\scss\_core.scss" />
+    <Content Include="Assets\admin\libs\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Assets\admin\libs\font-awesome\scss\_icons.scss" />
+    <Content Include="Assets\admin\libs\font-awesome\scss\_larger.scss" />
+    <Content Include="Assets\admin\libs\font-awesome\scss\_list.scss" />
+    <Content Include="Assets\admin\libs\font-awesome\scss\_mixins.scss" />
+    <Content Include="Assets\admin\libs\font-awesome\scss\_path.scss" />
+    <Content Include="Assets\admin\libs\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Assets\admin\libs\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Assets\admin\libs\font-awesome\scss\_stacked.scss" />
+    <Content Include="Assets\admin\libs\font-awesome\scss\_variables.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ProductCategory\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

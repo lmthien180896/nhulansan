@@ -18,6 +18,8 @@ namespace NlsShop.Service
 
         IEnumerable<Product> GetAll(string keyword);
 
+        IEnumerable<Product> GetProductsByCategory(int id);
+
         Product GetById(int id);
 
         void Save();
@@ -87,6 +89,11 @@ namespace NlsShop.Service
             {
                 return _productRepository.GetAll();
             }
+        }
+
+        public IEnumerable<Product> GetProductsByCategory(int id)
+        {
+            return _productRepository.GetMulti(x => x.CategoryID == id);
         }
 
         public Product GetById(int id)

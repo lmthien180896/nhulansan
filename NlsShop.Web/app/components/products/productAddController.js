@@ -32,15 +32,15 @@
             });
         }
 
-        function loadParentCategories() {
-            apiService.get('api/productcategory/getallparents', null, function (result) {
+        function loadProductCategories() {
+            apiService.get('api/productcategory/getallchildren', null, function (result) {
                 $scope.productCategories = result.data;
             }, function () {
-                console.log("Can't load parent categories");
+                console.log("Can't load children categories");
             });
         }
 
-        $scope.ChooseImage = function () {
+        function ChooseImage(){
             var finder = new CKFinder();
             finder.selectActionFunction = function (fileUrl) {
                 $scope.$apply(function () {
@@ -48,7 +48,7 @@
                 });
             };
             finder.popup();
-        };
+        }
 
         $scope.moreImages = [];
 
@@ -63,6 +63,6 @@
             finder.popup();
         };
 
-        loadParentCategories();
+        loadProductCategories();
     }
 })(angular.module('nlsshop.product'));

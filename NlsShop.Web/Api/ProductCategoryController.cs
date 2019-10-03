@@ -84,6 +84,21 @@ namespace NlsShop.Web.Api
             });
         }
 
+        [Route("getallchildren")]
+        [HttpGet]
+        public HttpResponseMessage GetAllChildren(HttpRequestMessage request)
+        {
+            return CreateHttpResponse(request, () =>
+            {
+                var model = _productCategoryService.GetAllChildren();
+
+                var responseData = Mapper.Map<IEnumerable<ProductCategory>, IEnumerable<ProductCategoryViewModel>>(model);
+
+                var response = request.CreateResponse(HttpStatusCode.OK, responseData);
+                return response;
+            });
+        }
+
         [Route("create")]
         [HttpPost]
         [AllowAnonymous]

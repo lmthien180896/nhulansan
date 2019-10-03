@@ -16,6 +16,8 @@ namespace NlsShop.Service
 
         IEnumerable<ProductCategory> GetAllParents();
 
+        IEnumerable<ProductCategory> GetAllChildren();
+
         IEnumerable<ProductCategory> GetAll();
 
         IEnumerable<ProductCategory> GetAll(string keyword);
@@ -51,6 +53,11 @@ namespace NlsShop.Service
         public IEnumerable<ProductCategory> GetAllParents()
         {
             return _productCategoryRepository.GetMulti(x => x.ParentID == null);
+        }
+
+        public IEnumerable<ProductCategory> GetAllChildren()
+        {
+            return _productCategoryRepository.GetMulti(x => x.ParentID != null);
         }
 
         public IEnumerable<ProductCategory> GetAll()
